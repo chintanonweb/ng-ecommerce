@@ -1,0 +1,46 @@
+<div class="cover   ">
+    <div class="container-fluid my-5 text-light ">
+        <h3 class="display-5 mb-2 text-center text-uppercase font-weight-bold">All Products</h3>
+        <div class="mb-5">
+            <a class="text-light " [routerLink]="['/']"><i class="fas fa-arrow-left mr-2 text-light"></i> Home Page</a>
+        </div>
+    </div>
+</div>
+
+<div class="container ">
+  <div class="row all justify-content-around flex-wrap mx-auto mt-5 text-light">
+    <div class="col-3 d-flex justify-content-center align-items-center">
+      <a (click)=" filterProduct('all')" (click)="activeMenu('all')" class="anchor text-center" [ngClass]="{ 'active' : status == 'all' }" >All</a>
+    </div>
+    <div class="col-3 d-flex justify-content-center align-items-center">
+      <a (click)=" filterProduct('Xbox')" (click)="activeMenu('Xbox')" class="anchor text-center" [ngClass]="{ 'active' : status == 'Xbox'}" >Xbox</a>
+    </div>
+    <div class="col-3 d-flex justify-content-center align-items-center">
+      <a (click)=" filterProduct('PS')"  (click)="activeMenu('PS')" class="anchor text-center" [ngClass]="{ 'active' : status == 'PS' }" >Ps</a>
+    </div>
+    <div class="col-3 d-flex justify-content-center align-items-center">
+      <a (click)=" filterProduct('PC')" (click)="activeMenu('PC')" class="anchor text-center" [ngClass]="{ 'active' : status == 'PC' }" >Pc</a>
+    </div>
+  </div>
+</div>
+
+<!-- _____________________________ -->
+
+<div class="container my-5" >
+    <ng-container *ngIf="!loading" >
+        <div class=" row"  >
+            <app-product *ngFor="let product of filteredProducts |catPipe: filterCat| searchFilter :terms| slice: (page-1) * pageSize : page * pageSize"  [productData]="product"
+            (messageFromChild)="actionFromParent($event)"
+            class=" col-lg-3 col-md-4 col-xl-3 col-12 d-flex justify-content-center">
+          </app-product>
+    </div>
+    </ng-container>
+    <div *ngIf="loading" class="spinner-border d-flex justify-content-center m-auto mt-5 text-primary" role="status" style="text-align: center;">
+    </div>
+</div>
+
+<ngb-pagination  class="d-flex justify-content-center"
+  [collectionSize]="(productlist.length)"
+  [(page)]="page"
+  [pageSize]="pageSize" >
+</ngb-pagination>

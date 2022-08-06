@@ -1,0 +1,33 @@
+<div class="mycard my-4" >
+
+    <img class="w-100" src="{{ productData.image}}" alt="">
+    <span class="Sold-out" *ngIf="productData.quantity<=0" >Sold out</span>
+    <span class="Free" *ngIf="productData.price<=0">Free</span>
+
+
+    <!-- <span class="Free" *ngIf="productData.price>0">{{productData.price | eURToEGP  }} </span> -->
+    <span class="Free" *ngIf="productData.price>0">{{productData.price | eURToEGP}} </span>
+
+
+    <div class="con-text" [routerLink]="['/productdetails', productData._id]" >
+        <h2>{{productData.name}}</h2>
+        <h3>
+             <p class="my-2 green-col font-weight-light" *ngIf="productData.quantity>0 && productData.price>0"><small>Only {{productData.quantity | stock}} left</small></p>
+        </h3>
+    </div>
+    <ul class="ul">
+      <li (click)="showSnackbarTopPosition('Added to Cart','Close')"
+       (click)="addtocart(productData)" *ngIf="productData.quantity>0"><i class="bx bx-drink fas fa-shopping-cart "></i></li>
+      <li
+       *ngIf="loggedIn"><a *ngIf="addedTOWishList" (click)="handleRemoveToWishList()"
+        ><i class="fa fa-heart" (click)="showSnackbarTopPosition('Removed from Wish List','Close')"></i
+      ></a>
+
+      <a *ngIf="!addedTOWishList" (click)="handleAddToWishList()"
+        ><i class="far fa-heart" (click)="showSnackbarTopPosition('Added to Wish List','Close')"></i
+      ></a></li>
+  </ul>
+</div>
+
+
+

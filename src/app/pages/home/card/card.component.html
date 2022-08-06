@@ -1,0 +1,21 @@
+<li >
+  <div class="listcard--card " >
+      <div class="card--img pointer"> <img [routerLink]="['/productdetails', productData._id]" src="{{ productData.image}}" alt="" class="imageCard"></div>
+      <div class="listcard--card--content">
+          <div class="game-info">
+              <div class="game-name fw-500"> {{ productData.name}}</div>
+              <div class="desc">{{ productData.category}}</div>
+          </div>
+          <div class="action d-flex justify-content-between align-items-center">
+              <div class="vote-count d-flex justify-content-between align-items-center">
+                  <div class="vote d-flex justify-content-between align-items-center m-0" ><img
+                        src="../../../assets/imgs/star-fill.svg" alt="">
+                      <p class="vote--data m-0">{{ productData.rating}}</p>
+                  </div>
+                  <p class="data--orders m-0">{{ productData.quantity}} items left</p>
+              </div>
+              <div class="btn btn-CTA" (click)="addtocart(productData)" >Add To Cart</div>
+          </div>
+      </div>
+  </div>
+</li>

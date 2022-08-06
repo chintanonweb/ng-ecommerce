@@ -1,0 +1,76 @@
+<app-header title="Login"></app-header>
+
+<div class="container-fluid ps-md-0">
+  <div class="row g-0">
+    <div class="col-md-4 col-lg-6 d-flex flex-column align-items-center mt-5">
+			<h1 class="text-white text-center">Not a member?</h1>
+			<button mat-raised-button color="primary"	 [routerLink]="['/register']"  label="Register"  (click)="show()" class="text-uppercase fw-bold mt-3">Register</button>
+		</div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+              <h3 class="login-heading mb-4 text-white">Welcome back!</h3>
+
+              <!-- Sign In Form -->
+              <form [formGroup]="login">
+
+
+                <!-- Username -->
+								<div class="form-floating mb-3">
+									<div  class="p-inputgroup">
+                    <mat-form-field class="text-white w-100 mat-form-field" appearance="outline">
+                      <mat-label class="text-white">Username</mat-label>
+                      <input matInput type="username"  class="text-white" formControlName="username"> 
+                      <mat-error  *ngIf="login.controls['username'].touched && login.controls['username'].invalid">
+                        <mat-error *ngIf="login.controls['username'].errors?.['required']" class="p-error block">Username is required</mat-error>
+                        <mat-error *ngIf="login.controls['username'].errors?.['pattern']" class="p-error block">Invalid username</mat-error>
+                      </mat-error> 
+                    </mat-form-field>
+								  </div>
+								</div>
+
+
+								<!-- Password -->
+								<div class="form-floating mb-3">
+									
+									<div  class="p-inputgroup">
+                    <mat-form-field class="text-white w-100 mat-form-field" appearance="outline">
+                      <mat-label class="text-white">Password</mat-label>
+                      <input matInput type="password"  class="w-100" formControlName="password" placeholder="Password">  
+                      <mat-error  *ngIf="login.controls['password'].touched && login.controls['password'].invalid">
+                        <mat-error *ngIf="login.controls['password'].errors?.['required']" class="p-error block">Password is required</mat-error>
+                      </mat-error>  
+                    </mat-form-field>
+										      
+								  </div>
+									<mat-error class="p-error block">{{errorMessage}}</mat-error>
+								</div>
+
+                
+
+                
+
+                <div class="mb-3 d-flex align-items-center">
+									<mat-slide-toggle color="primary" formControlName="remember" class="me-3 d-flex align-items-center "></mat-slide-toggle>
+                  <label class="form-check-label text-white"  for="rememberPasswordCheck">
+                    Remember me
+                  </label>
+                </div>
+
+                <div class="d-grid  ">
+                  <button mat-raised-button color="primary" label="Log in" [disabled]="login.invalid" (click)="authenticate()" class="text-uppercase h-100 fw-bold mb-2" type="submit">Login</button>
+                  <div class="text-center mt-3">
+                    <a class="small"  href="#">Forgot password?</a>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

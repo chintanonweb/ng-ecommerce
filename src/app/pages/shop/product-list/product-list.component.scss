@@ -1,0 +1,91 @@
+.green-col-bk{
+    background-color: #00ff01;
+}
+
+.green-col{
+    color: #00ff01;
+}
+.table-slider {
+    max-height:600px;
+    overflow-y:scroll;
+}
+.wish-slider {
+    max-height:300px;
+    overflow-y:scroll;
+}
+.cover{
+ background-image: url('https://i.ibb.co/zV9wTWV/background-14651782-Copy.jpg');
+height: 205px;
+overflow: hidden;
+margin-top: 56.5px;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+
+
+
+.pagination > li > a
+{
+    background-color: #0d100d;
+    color: white;
+    border: none;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #5a5a5a;
+    background-color: #00ff01;
+    // color: #fff;
+}
+
+.pagination > .active > a
+{
+    color: #00ff01;
+    background-color: #5A4181 !Important;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #5A4181 !Important;
+}
+
+ngb-pagination ::ng-deep a {
+    color: white !important;
+    background-color: #1a1a1a;
+  }
+
+  ngb-pagination ::ng-deep .page-item.active .page-link {
+    border-color: black;
+    background-color: #76FF03;
+  }
+
+  ngb-pagination ::ng-deep .page-link:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.1rem #76FF03;
+  }
+  .anchor{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+  .active{
+    cursor: pointer;
+    color: #00ff01;
+    border: 1px solid #00ff01;
+    padding: 9% 25% 11% 25%;
+    // background-color: #00ff01;
+    border-radius: 34px;
+    text-decoration: none;
+  }
+  .all{
+    width: 30%;
+  }
+  @media screen and (max-width: 768px) {
+    .all{
+      width: 60%;
+    }
+  }
+

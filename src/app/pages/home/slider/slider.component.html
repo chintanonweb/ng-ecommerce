@@ -1,0 +1,25 @@
+<header [ngStyle]="{'background-image': 'url('+ actualImage + ')'}" class="pt-5 w-100 h-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center" id="header-text">
+
+        <p id="Text1" class="align-self-center mx-1 mb-0 mt-5-sm pt-5-sm">
+          GAMEWORLD DISTRIBUTORS
+        </p>
+
+      </div>
+      <div id="Text2" class="col-12 d-flex justify-content-center text-center">
+        Connecting Players & <br />
+        Games in an Immersive environment.
+      </div>
+      <div class="col-12 d-flex justify-content-center">
+        <button *ngIf="!loggedIn" type="button" [routerLink]="['auth/register']" id="HeaderBtn" class="btn btn-primary btn-sm mx-2">
+          Become a Member for Free!
+        </button>
+        <button *ngIf="loggedIn" type="button" [routerLink]="['shop/productlist']" id="HeaderBtn" class="btn btn-primary btn-sm mx-2">
+          Discover our Products
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

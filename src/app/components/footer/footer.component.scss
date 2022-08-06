@@ -1,0 +1,165 @@
+.email {
+  width: 20%;
+  margin-bottom: auto;
+  height: 50px;
+  background-color: #292945;
+  padding: 10px 0px 10px 10px;
+  border-radius: 50px;
+}
+
+.email-input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  line-height: 20px;
+  -webkit-transition: width 0.4s linear;
+  transition: width 0.4s linear;
+}
+
+.email .email-input {
+  padding: 0 10px;
+  width: calc(100% - 40px);
+  caret-color: #76ff03;
+  font-size: 19px;
+  font-weight: 300;
+  color: white;
+  -webkit-transition: width 0.4s linear;
+  transition: width 0.4s linear;
+}
+
+.email-icon {
+  height: 30px;
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: white;
+  background-color: #76ff03;
+  font-size: 10px;
+  border-radius: 50px;
+}
+
+.email-icon:hover {
+  color: #fff !important;
+}
+.Logo {
+  margin-right: 8px;
+}
+.navbar-brand {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.bottom {
+  padding: 0 118px;
+}
+
+.bottom .hor-line {
+  background-color: #30313f;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  height: 1px;
+}
+
+.col-8 {
+  color: white;
+  width: 50%;
+}
+
+.col-8 .title {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 56px;
+}
+
+.col-8 p {
+  font-weight: 300;
+}
+
+.bottom .call-to-action {
+  margin-bottom: 90px;
+}
+
+.bottom .call-to-action .bottom--content .title {
+  font-size: 42px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 56px;
+}
+
+.bottom .call-to-action .bottom--content p {
+  font-weight: 300;
+  color: white;
+  margin-right: 10%;
+}
+
+.bottom .call-to-action h4 {
+  color: #76ff03;
+  margin-bottom: 24px;
+}
+
+.bottom .call-to-action a {
+  color: white;
+  font-weight: 300;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.bottom .privacy {
+  margin-bottom: 36px;
+}
+
+.bottom .privacy .terms-privacy {
+  gap: 96px;
+}
+
+.bottom .privacy .terms-privacy a {
+  color: white;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.bottom .privacy .social {
+  gap: 40px;
+}
+
+.bottom .copyright {
+  color: #76ff03;
+  margin-bottom: 36px;
+}
+
+.bottom .copyright h4 {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .bottom {
+    padding: 0 5%;
+  }
+  .bottom .email {
+    width: 50%;
+  }
+  .bottom .col-7,
+  .bottom .col-5 {
+    width: 100%;
+  }
+  .bottom .bottom--content {
+    margin-bottom: 30px;
+  }
+  .bottom .bottom--content .title {
+    font-size: 20px !important;
+    margin-bottom: 20px !important;
+  }
+}
