@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "GoodGame-Angular-Ecommerce": {
+    "Ng-Ecommerce": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/good-game-angular-ecommerce",
+            "outputPath": "dist/ng-ecommerce",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -45,12 +45,12 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "5mb",
                   "maximumError": "100mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
+                  "maximumWarning": "2mb",
                   "maximumError": "100mb"
                 }
               ],
@@ -77,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "GoodGame-Angular-Ecommerce:build:production"
+              "browserTarget": "Ng-Ecommerce:build:production"
             },
             "development": {
-              "browserTarget": "GoodGame-Angular-Ecommerce:build:development"
+              "browserTarget": "Ng-Ecommerce:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "GoodGame-Angular-Ecommerce:build"
+            "browserTarget": "Ng-Ecommerce:build"
           }
         },
         "test": {

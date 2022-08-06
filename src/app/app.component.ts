@@ -9,7 +9,7 @@ import { AuthService } from './services/auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'GoodGame-Angular-Ecommerce';
+  title = 'Ng-Ecommerce';
   constructor(private authService: AuthService,private router: Router){
     this.router.events.pipe(filter(event => event instanceof GuardsCheckStart)).subscribe(()=>{
         this.authService.authenticate()
